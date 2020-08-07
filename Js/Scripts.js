@@ -150,7 +150,31 @@ let multiples = function(n) {
     document.write(sum);
 };
 
-
 multiples(1000);
 
 console.log(sum);
+//Task 10
+let vowels = "BAEUOItoaeius";
+let string = "THE FUNCTION";
+
+let array = "";
+for (i = 0; i < string.length; i++) {
+    if (vowels.indexOf(string[i]) >= 0) array += string[i];
+
+}
+console.log(array);
+
+// Task 11
+
+function find(string1, string2) {
+    let string1ToArray = Array.from(string1);
+    let string2ToArray = Array.from(string2);
+
+    let common = string2ToArray.filter(value => {
+        return string1ToArray.indexOf(value) != -1;
+    });
+
+    console.log(`Common letters: ${common}`);
+}
+
+find('Beauty', 'Ngobeni');
